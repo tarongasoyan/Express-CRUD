@@ -9,11 +9,11 @@ async function createStudent(studentData) {
 }
 
 async function updateStudent(studentId, studentData) {
-    if (!teacherId) {
+    if (!studentId) {
         res.status(404).json({error: 'Student ID is not found'});
     }
 
-    if (!StudentData || Object.keys(studentData).length === 0) {
+    if (!studentData || Object.keys(studentData).length === 0) {
         res.status(404).json({error: 'Data should not be empty'});
     }
 
